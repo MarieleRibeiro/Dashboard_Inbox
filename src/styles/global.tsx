@@ -171,6 +171,7 @@ h1 {
   color: ${props => props.theme.colors.blue400}
 } 
 p {
+  line-height: 16px;
   font-size: 14px;
   color: ${props => props.theme.colors.black}
 }
@@ -188,5 +189,9 @@ small {
   font-weight: normal;
   font-size: 12px;
   color: ${props => props.theme.colors.gray}
+}
+svg {
+ color: ${props => props.theme.colors.gray};
+  font-size: 18px;
 }
 `
