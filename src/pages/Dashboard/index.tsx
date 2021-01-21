@@ -2,7 +2,7 @@ import Nav from "../../components/Nav";
 import Inbox from "../../components/MessageBox";
 import Message from "../../components/Message";
 import DetailsInbox from "../../components/LeadDetails";
-import { Container } from "./styles"
+import { Container } from "./styles";
 
 export default function Dashboard() {
   return (
@@ -12,5 +12,5 @@ export default function Dashboard() {
       <Message />
       <DetailsInbox />
     </Container>
-  )
+  );
 }
