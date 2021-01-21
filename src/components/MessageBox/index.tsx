@@ -19,7 +19,7 @@ import avatar002 from "../../downloads/avatar002.png";
 import avatar003 from "../../downloads/avatar003.png";
 import avatar004 from "../../downloads/avatar004.png";
 //import avatar005 from "../../downloads/avatar005.png";
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 
 const inbox = [
   {
