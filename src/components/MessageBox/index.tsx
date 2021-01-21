@@ -18,7 +18,7 @@ import avatar001 from "../../downloads/avatar001.png";
 import avatar002 from "../../downloads/avatar002.png";
 import avatar003 from "../../downloads/avatar003.png";
 import avatar004 from "../../downloads/avatar004.png";
-import avatar005 from "../../downloads/avatar005.png";
+//import avatar005 from "../../downloads/avatar005.png";
 import { useEffect, useState } from "react";
 
 const inbox = [
@@ -34,23 +34,23 @@ const inbox = [
 ];
 
 export default function Inbox() {
-  const [messages, setMessages] = useState<
-    Array<{ name: string; title: string }>
-  >([]);
-
-  useEffect(() => {
-    async function fetchMessages() {
-      const result = await fetch(
-        "https://run.mocky.io/v3/911f721a-38e2-4d62-b05e-ad92a9f4eed3"
-      );
-      if (result.ok) {
-        const payload = await result.json();
-        setMessages(payload.messages);
+  /*  const [messages, setMessages] = useState<
+      Array<{ name: string; title: string }>
+    >([]);
+  
+    useEffect(() => {
+      async function fetchMessages() {
+        const result = await fetch(
+          "https://run.mocky.io/v3/911f721a-38e2-4d62-b05e-ad92a9f4eed3"
+        );
+        if (result.ok) {
+          const payload = await result.json();
+          setMessages(payload.messages);
+        }
       }
-    }
-
-    fetchMessages();
-  }, []);
+  
+      fetchMessages();
+    }, []);*/
 
   return (
     <Container>
