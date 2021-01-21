@@ -19,6 +19,7 @@ import avatar002 from "../../downloads/avatar002.png";
 import avatar003 from "../../downloads/avatar003.png";
 import avatar004 from "../../downloads/avatar004.png";
 import avatar005 from "../../downloads/avatar005.png";
+import { useEffect, useState } from "react";
 
 const inbox = [
   {
@@ -33,6 +34,24 @@ const inbox = [
 ];
 
 export default function Inbox() {
+  const [messages, setMessages] = useState<
+    Array<{ name: string; title: string }>
+  >([]);
+
+  useEffect(() => {
+    async function fetchMessages() {
+      const result = await fetch(
+        "https://run.mocky.io/v3/911f721a-38e2-4d62-b05e-ad92a9f4eed3"
+      );
+      if (result.ok) {
+        const payload = await result.json();
+        setMessages(payload.messages);
+      }
+    }
+
+    fetchMessages();
+  }, []);
+
   return (
     <Container>
       <SearchBoxes>
@@ -96,22 +115,23 @@ export default function Inbox() {
             Hello John, I would really like to see some examples of the previous
           </p>
         </Content>
+        <MessageItem
+          message="Hello John, I would really like to see some examples of the previous"
+          title="Please review and sing the last Bin..."
+          date="Feb 23"
+        />
+        <MessageItem
+          message="Hello John, I would really like to see some examples of the previous"
+          title="Please review and sing the last Bin..."
+          date="Feb 22"
+        />
+        <MessageItem
+          message="Hello John, I would really like to see some examples of the previous"
+          title="Please review and sing the last Bin..."
+          date="Feb 22"
+        />
 
-        <Content>
-          <Message>
-            <Strong>
-              <img src={avatar004} alt="foto" /> Ham Chuwon{" "}
-            </Strong>
-            <Small>Feb 23</Small> <HistoryMsg>3</HistoryMsg>
-          </Message>
-
-          <TitleMsg>Please review and sing the last Bin...</TitleMsg>
-          <p>
-            Hello John, I would really like to see some examples of the previous
-          </p>
-        </Content>
-
-        <Content>
+        {/* <Content>
           <Message>
             <Strong>
               <img src={avatar005} alt="foto" /> Ham Chuwon{" "}
@@ -123,8 +143,32 @@ export default function Inbox() {
           <p>
             Hello John, I would really like to see some examples of the previous
           </p>
-        </Content>
+        </Content>*/}
       </BoxMessage>
     </Container>
   );
 }
+
+const MessageItem = ({
+  date,
+  title,
+  message,
+}: {
+  date: string;
+  title: string;
+  message: string;
+}) => {
+  return (
+    <Content>
+      <Message>
+        <Strong>
+          <img src={avatar004} alt="foto" /> Ham Chuwon{" "}
+        </Strong>
+        <Small>{date}</Small> <HistoryMsg>3</HistoryMsg>
+      </Message>
+
+      <TitleMsg>{title}</TitleMsg>
+      <p>{message}</p>
+    </Content>
+  );
+};
