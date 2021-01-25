@@ -57,7 +57,7 @@ export const Content = styled.div`
   width: 100%;
   margin-bottom: 25px;
   padding: 15px;
-  background: ${(props) => props.theme.colors.blue100};
+  cursor: pointer;
   p {
     font-size: 13px;
     color: ${(props) => props.theme.colors.gray};
@@ -68,7 +68,11 @@ export const Content = styled.div`
   :nth-child(6) {
     border-bottom: 1px solid rgba(126, 144, 166, 0.1);
   }
+  :hover{
+    background: ${(props) => props.theme.colors.blue100};
+  }
 `;
+
 
 export const Span = styled.div`
   color: ${(props) => props.theme.colors.gray};

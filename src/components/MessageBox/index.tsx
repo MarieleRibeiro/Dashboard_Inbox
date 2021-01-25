@@ -128,7 +128,7 @@ export default function Inbox() {
         <MessageItem
           message="Hello John, I would really like to see some examples of the previous"
           title="Please review and sing the last Bin..."
-          date="Feb 22"
+          date="Feb 25"
         />
 
         {/* <Content>
@@ -162,7 +162,7 @@ const MessageItem = ({
     <Content>
       <Message>
         <Strong>
-          <img src={avatar004} alt="foto" /> Ham Chuwon{" "}
+          <img src={avatar004} alt="foto" /> Ham Chuwon
         </Strong>
         <Small>{date}</Small> <HistoryMsg>3</HistoryMsg>
       </Message>

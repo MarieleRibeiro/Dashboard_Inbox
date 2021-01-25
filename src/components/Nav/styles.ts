@@ -10,11 +10,12 @@ export const Container = styled.div`
   ul {
     flex-direction: column;
     display: flex;
+    
   }
-  a {
-    font-size: 18px;
-    color: ${(props) => props.theme.colors.gray};
+  svg:hover{
+    color: ${(props) => props.theme.colors.blue};
   }
+ 
 `;
 export const Logo = styled.div`
   position: relative;
@@ -46,20 +47,22 @@ export const IconsCenter = styled.div`
   }
 `;
 export const Icons = styled.div`
+    
   a {
     margin-bottom: 22px;
   }
   a:last-child {
     background-color: ${(props) => props.theme.colors.green};
-    color: ${(props) => props.theme.colors.white};
     border-radius: 100%;
     padding: 8px;
     display: flex;
     align-items: center;
+    color: #fff;
   }
-  ul {
-    align-items: center;
-  }
+ ul {
+   align-items: center;
+ }
+ 
 `;
 export const Ball = styled.div`
   position: absolute;
@@ -74,4 +77,5 @@ export const NavigationMenu = styled.div`
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+ align-items: center;
 `;

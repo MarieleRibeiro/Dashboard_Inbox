@@ -58,7 +58,7 @@ export default function Nav() {
               <FiActivity />
             </a>
             <a href="/">
-              <FiInbox />
+              <FiInbox color="#fff" />
             </a>
           </ul>
           <Avatar>

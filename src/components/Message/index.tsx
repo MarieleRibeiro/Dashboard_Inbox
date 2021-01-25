@@ -24,9 +24,9 @@ export default function Message() {
 
             <DetailsMessage>
               <span>Today, 2:45pm</span>
-              <button><FiStar size="18" /> </button>
-              <button><FiCornerUpLeft size="18" />  </button>
-              <button><FiMoreHorizontal size="18" />  </button>
+              <button><FiStar /> </button>
+              <button><FiCornerUpLeft />  </button>
+              <button><FiMoreHorizontal />  </button>
             </DetailsMessage>
 
           </Wrapper>
@@ -41,8 +41,8 @@ export default function Message() {
           <br />
 
           <Details>
-            <a href="/"><FiPaperclip size="18" /> <span>1 Attachment</span></a>
-            <a href="/"> <FiFileText size="18" />  <span>Billing Agreement.pdf</span> </a>
+            <a href="/"><FiPaperclip /> <span>1 Attachment</span></a>
+            <a href="/"> <FiFileText />  <span>Billing Agreement.pdf</span> </a>
           </Details>
 
         </Description>
