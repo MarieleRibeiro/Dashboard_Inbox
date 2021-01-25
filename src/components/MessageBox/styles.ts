@@ -51,6 +51,11 @@ export const Button = styled.button`
 export const BoxMessage = styled.div`
   margin-top: 32px;
   overflow-y: scroll;
+  ::-webkit-scrollbar {
+    width: 12px;
+    background: #f5f5f5;
+  }
+
 `;
 export const Content = styled.div`
   max-width: 294px;
